@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<link rel="icon" href="icon.png">
+<title>School is fun! 🎈</title>
+
+
+
+
+
+
+
+<meta content="Epic Video" property="og:title" />
+<meta content="Its all about something, who knows what!" property="og:description" />
+<meta content="https://boosk.macbook01.repl.co/" property="og:url" />
+<meta content="icon2.png" property="og:image" />
+<meta content="#224de3" data-react-helmet="true" name="theme-color" />
+
+<html>
+
+<hr>
+
+<div class="button-container">
+  <center>
+    <style>
+      button {
+        height: 150px;
+        width: 200px;
+        border-radius: 30px
+      }
+    </style>
+
+    <button onclick="playVid()" type="button">Play 🔥</button>
+
+    <button type="button" disabled>Stop 🧊</button>
+
+    <!-- Test Background  
+    <body background="2x2.svg"> 
+  -->
+
+    <!-- 
+      Real pause button lol
+      <button onclick="pauseVid()" type="button">Pause Video</button>
+
+      -->
+
+  </center>
+</div>
+
+<hr>
+
+<body>
+  <center>
+    <video id="myVideo">
+      <source id="mp4_src" src="video.mp4" type="video/mp4">
+  </center>
+  </video>
+
+
+  <script>
+    var x = document.getElementById("myVideo");
+    function playVid() {
+      x.play();
+    }
+
+    function pauseVid() {
+      x.pause();
+    }
+  </script>
+
+</body>
+
+</html>
