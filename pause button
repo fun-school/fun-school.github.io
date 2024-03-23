@@ -1,0 +1,3 @@
+<button onclick="pauseVid()" type="button">Pause Video</button>
+
+<body background="2x2.svg">
