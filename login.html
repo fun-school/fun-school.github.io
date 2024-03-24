@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>School is fun 🎈</title>
+  <style>
+    body {
+      background-color: #333;
+      animation: pulse 2s infinite alternate;
+      margin: 0;
+      padding: 0;
+    }
+
+    @keyframes pulse {
+      0% {
+        background-color: #333;
+      }
+
+      100% {
+        background-color: #555;
+      }
+    }
+
+    .log-form {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 10px;
+      box-sizing: border-box;
+      width: 300px;
+      margin-left: -150px;
+      text-align: center;
+    }
+
+    .log-form h2 {
+      margin: 0;
+    }
+
+    .log-form input {
+      width: 90%;
+      padding: 5px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      border: none;
+    }
+
+    .log-form .button-container {
+      text-align: center;
+      /* Center-align the button within the container */
+    }
+
+    .log-form button {
+      width: 90%;
+      /* Adjust the width as needed */
+      padding: 10px;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <div class="log-form">
+    <h2>
+      <center><img src="main-logo.png" width="20" height="20" />
+        <font color="#007BFF">Beta Login</font>
+      </center>
+    </h2>
+    <p></p>
+    <form id="login-form">
+      <input type="text" title="username" id="username" placeholder="Username" />
+      <p></p>
+      <input type="password" title="password" id="password" placeholder="Password" />
+      <p></p>
+      <div class="button-container">
+        <button type="submit" class="btn">Login</button>
+      </div>
+    </form>
+  </div>
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      if (username === 'Beta2024' && password === 'schoolisfun') {
+        window.location.href = 'beta';
+      } else {
+        alert('Invalid username or password. Please try again.');
+      }
+    });
+  </script>
+</body>
+
+</html>
