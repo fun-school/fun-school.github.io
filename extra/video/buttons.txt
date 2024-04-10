@@ -9,3 +9,7 @@
   function makeSmall() { 
       myVideo.width = 560; 
   } 
+
+  function makeNormal() { 
+      myVideo.width = 1400; 
+  } 
