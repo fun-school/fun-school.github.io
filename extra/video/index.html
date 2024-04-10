@@ -1,59 +1,52 @@
 <!DOCTYPE html>
 
-<link rel="icon" href="main-logo.png">
+<body> 
+  <div style="text-align:center"> 
+    <button onclick="playPause()">Play/Pause</button>  
+    <button onclick="makeBig()">Big</button>
+    <button onclick="makeSmall()">Small</button>
+    <button onclick="makeNormal()">Normal</button>
+    <button onclick="restart();">Restart</button> 
+    <button onclick="skip(-10)">Rewind</button>
+    <button onclick="skip(10)">Fastforward</button>
+    
+    <br><br>
+    <video id="video1" width="420">
+      <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+  </div> 
+  </body>
 
-<html>
-
-<hr>
-
-<div class="button-container">
-  <center>
-    <style>
-      button {
-        height: 150px;
-        width: 200px;
-        border-radius: 30px
+<script>
+  var myVideo = document.getElementById("video1"); 
+  
+  function playPause() { 
+      if (myVideo.paused) 
+          myVideo.play(); 
+      else 
+          myVideo.pause(); 
+  } 
+  
+  function makeBig() { 
+      myVideo.width = 560; 
+  } 
+  
+  function makeSmall() { 
+      myVideo.width = 320; 
+  } 
+  
+  function makeNormal() { 
+      myVideo.width = 420; 
+  } 
+  
+   function skip(value) {
+          var video = document.getElementById("video1");
+          video.currentTime += value;
+   }    
+   
+   function restart() {
+          var video = document.getElementById("video1");
+          video.currentTime = 0;
       }
-    </style>
-
-    <button onclick="playVid()" type="button">Play 🔥</button>
-
-    <button type="button" disabled>Stop 🧊</button>
-
-    <!-- Test Background  
-    <body background="2x2.svg"> 
-  -->
-
-    <!-- 
-      Real pause button lol
-      <button onclick="pauseVid()" type="button">Pause Video</button>
-
-      -->
-
-  </center>
-</div>
-
-<hr>
-
-<body>
-  <center>
-    <video id="myVideo">
-      <source id="mp4_src" src="video.mp4" type="video/mp4">
-  </center>
-  </video>
-
-
-  <script>
-    var x = document.getElementById("myVideo");
-    function playVid() {
-      x.play();
-    }
-
-    function pauseVid() {
-      x.pause();
-    }
-  </script>
-
-</body>
-
-</html>
+    </script>
