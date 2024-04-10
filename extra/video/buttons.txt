@@ -13,3 +13,6 @@
   function makeNormal() { 
       myVideo.width = 1400; 
   } 
+
+
+      <button onclick="restart();">Restart</button> 
