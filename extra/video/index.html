@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 
-
-
 <body> 
-
+  <div style="text-align:center"> 
+    <button onclick="playPause()">Play/Pause</button>  
+    <button onclick="restart();">Restart</button> 
+    <button onclick="skip(-10)">Rewind</button>
+    <button onclick="skip(10)">Forward</button>
     
     <br><br>
-
-    <div style="text-align:center"> 
-      <button onclick="playPause()">Play/Pause</button>  
-      <button onclick="restart();">Restart</button> 
-      <button onclick="skip(-10)">Rewind</button>
-      <button onclick="skip(10)">Forward</button>
     <video id="video1" width="65%" height="75%">
       <source src="video.mp4" type="video/mp4">
       Your browser does not support HTML5 video.
     </video>
+  </div> 
   </body>
 
 <script>
