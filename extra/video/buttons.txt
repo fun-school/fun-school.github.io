@@ -1,0 +1,11 @@
+    <button onclick="makeBig()">Big</button>
+    <button onclick="makeSmall()">Small</button>
+    <button onclick="makeNormal()">Normal</button>
+
+    function makeBig() { 
+      myVideo.width = 2240; 
+  } 
+  
+  function makeSmall() { 
+      myVideo.width = 560; 
+  } 

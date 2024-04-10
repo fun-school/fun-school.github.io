@@ -3,9 +3,7 @@
 <body> 
   <div style="text-align:center"> 
     <button onclick="playPause()">Play/Pause</button>  
-    <button onclick="makeBig()">Big</button>
-    <button onclick="makeSmall()">Small</button>
-    <button onclick="makeNormal()">Normal</button>
+
     <button onclick="restart();">Restart</button> 
     <button onclick="skip(-10)">Rewind</button>
     <button onclick="skip(10)">Fastforward</button>
@@ -27,17 +25,8 @@
       else 
           myVideo.pause(); 
   } 
-  
-  function makeBig() { 
-      myVideo.width = 2240; 
-  } 
-  
-  function makeSmall() { 
-      myVideo.width = 560; 
-  } 
-  
   function makeNormal() { 
-      myVideo.width = 1120; 
+      myVideo.width = 1400; 
   } 
   
    function skip(value) {
