@@ -4,6 +4,7 @@
   <div style="text-align:center"> 
     <button onclick="playPause()">Play/Pause</button>  
     <button onclick="restart();">Restart</button> 
+    <button onclick="fullscreen();">Fullscreen</button> 
     <button onclick="skip(-10)">Rewind</button>
     <button onclick="skip(10)">Forward</button>
     
@@ -33,4 +34,9 @@
           var video = document.getElementById("video1");
           video.currentTime = 0;
       }
+
+    function fullscreen() {
+        var video = document.getElementById("video1");
+        video.fullscreen()
+    }
     </script>
